@@ -6,8 +6,12 @@ authors = [
     {name = "kaseitako",email = "19668528+kaseitako@users.noreply.github.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13,<4.0"
 dependencies = [
+    "nextcord (>=3.0.1,<4.0.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "isort (>=6.0.1,<7.0.0)",
+    "pylint (>=3.3.6,<4.0.0)"
 ]
 
 
