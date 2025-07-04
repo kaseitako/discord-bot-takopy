@@ -1,0 +1,29 @@
+{
+  "name": "Discord Bot Takopy",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/git:latest": {
+      "ppa": true,
+      "version": "latest"
+    },
+    "ghcr.io/anthropics/devcontainer-features/claude-code:latest": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.pylint",
+        "ms-python.isort",
+        "ms-python.debugpy"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true
+      }
+    }
+  },
+  "postCreateCommand": "pip install poetry && poetry install",
+  "remoteUser": "vscode",
+  "shutdownAction": "stopContainer"
+}
