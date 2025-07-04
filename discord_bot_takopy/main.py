@@ -19,5 +19,8 @@ async def on_ready():
 async def ping(interaction: nextcord.Interaction):
     await interaction.send("pongッピ！")
 
+@bot.slash_command(description="ものまねするッピ！", guild_ids=[server_id])
+async def echo(interaction: nextcord.Interaction, arg: str):
+    await interaction.send(f"{arg}ッピ！")
 
 bot.run(token)
