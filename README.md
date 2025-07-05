@@ -53,6 +53,33 @@ poetry run python discord_bot_takopy/main.py
 
 pyproject.toml の Python 要求バージョンを確認してください（現在は 3.12 以上）。
 
+## Docker を使用する場合
+
+Docker を使用して bot をコンテナデプロイできます。
+
+### 前提条件
+
+- Docker Desktop
+
+### 使用方法
+
+1. イメージをビルド：
+```bash
+docker build -t discord-bot-takopy .
+```
+
+2. コンテナを実行：
+```bash
+docker run -e DISCORD_BOT_TOKEN="your_token" -e SERVER_ID="your_server_id" discord-bot-takopy
+```
+
+### 環境変数ファイルを使用する場合
+
+`.env` ファイルがある場合：
+```bash
+docker run --env-file .env discord-bot-takopy
+```
+
 ## Dev Container を使用する場合
 
 VS Code の Dev Container 機能を使用すると、一貫した開発環境を構築できます。
