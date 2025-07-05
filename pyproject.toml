@@ -3,8 +3,6 @@ name = "discord-bot-takopy"
 version = "0.1.0"
 description = ""
 authors = ["kaseitako <19668528+kaseitako@users.noreply.github.com>"]
-readme = "README.md"
-packages = [{include = "discord_bot_takopy"}]
 
 [tool.poetry.dependencies]
 python = ">=3.12,<4.0"
